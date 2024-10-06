@@ -5,7 +5,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: #242c36;
+    transition: background-color .3s ease;
+	// background-color: #242c36;
 	img {
 		width: 76px;
 		padding: 0.5em;
