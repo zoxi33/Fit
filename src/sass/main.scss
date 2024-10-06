@@ -79,7 +79,7 @@ header {
 			padding: 2.3em 15%;
 			text-decoration: none;
 			color: $bright;
-			// text-transform: uppercase;
+			text-transform: uppercase;
 			font-size: 2rem;
 			font-weight: 730;
 
@@ -138,10 +138,12 @@ header {
 		top: 27%;
 		left: 10%;
 		.heading-title {
+			z-index: 2;
 			font-size: 6.5rem;
 			color: $bright;
 		}
 		p {
+			z-index: 2;
 			color: #dddddd;
 			font-size: 2.3rem;
 			span {
@@ -154,8 +156,8 @@ header {
 			z-index: 2;
 			overflow: hidden;
 			position: absolute;
-			width: 300px;
-			bottom: 10em;
+			width: 270px;
+			bottom: 4em;
 			right: 10%;
 		}
 	}
@@ -169,7 +171,7 @@ header {
 		}
 		.one {
 			z-index: 1;
-			bottom: 1.6em;
+			bottom: 1.2em;
 			left: 15%;
 			transform: rotate(20deg);
 			animation: rotate-left 45s infinite ease;
@@ -253,7 +255,8 @@ header {
 	header {
 		.image {
 			.unusual {
-				width: 400px;
+				width: 360px;
+				bottom: 1.2em;
 			}
 		}
 		.background-images {
@@ -298,6 +301,15 @@ header {
 				width: 470px;
 				bottom: 2em;
 				right: 10%;
+			}
+		}
+		.menu-mobile{
+			.nav_link {
+			
+				
+				font-size: 2.3rem;
+				
+	
 			}
 		}
 	}
