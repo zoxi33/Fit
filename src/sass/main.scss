@@ -224,11 +224,39 @@ header {
 		}
 	}
 }
+main{
+	.hero-img{
+		background-image: url('/dist/img/luis-reyes-mTorQ9gFfOg-unsplash.jpg');
+		height: 300px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: inset 0 0 25px 25px $dark;
+		.hero-img-text{
+			z-index: 3;
+			color: $light-creme;
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+		.hero-img-shadow{
+			position: absolute;
+			height: 100%;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background-color: rgba($color: #1e232b, $alpha: 0.8);
+		}
+	}
+}
 @keyframes rotate-right {
 	0% {
 		transform: rotate(0);
 	}
-	100% {
+100% {
 		transform: rotate(360deg);
 	}
 }
@@ -285,6 +313,15 @@ header {
 			}
 		}
 	}
+	main{
+		.hero-img{
+			
+			.hero-img-text{
+				font-size: 3rem;
+			}
+			
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -331,15 +368,7 @@ header {
 		.navbar-dekstop {
 			visibility: visible;
 		}
-		.background-images {
-			.five {
-				z-index: 1;
-				top: 7em;
-				left: 14%;
-				transform: rotate(-6deg);
-				animation: rotate-right 47s infinite ease;
-			}
-		}
+		
 	}
 }
 
@@ -349,6 +378,15 @@ header {
 			.unusual {
 				width: 510px;
 				bottom: 3em;
+			}
+		}
+		.background-images {
+			.five {
+				z-index: 1;
+				top: 7em;
+				left: 14%;
+				transform: rotate(-6deg);
+				animation: rotate-right 47s infinite ease;
 			}
 		}
 		.heading {
@@ -362,11 +400,16 @@ header {
 			}
 		}
 	}
+	main{
+		.hero-img{
+			height: 350px;
+			.hero-img-text{
+				font-size: 4rem;
+			}
+			
+		}
+	}
 }
-@media (max-width: 1600px) {
-	// Style
-}
-
 @media (min-width: 1600px) {
 	header {
 		.navbar-dekstop {
