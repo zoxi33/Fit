@@ -50,6 +50,7 @@ header {
 				// text-transform: uppercase;
 				font-size: 1.8rem;
 				transition: color 0.3s;
+				font-weight: 670;
 			}
 			:first-child {
 				color: $bright;
@@ -82,7 +83,6 @@ header {
 			text-transform: uppercase;
 			font-size: 2rem;
 			font-weight: 730;
-
 		}
 		.nav_link::before,
 		.nav_link::after {
@@ -172,10 +172,9 @@ header {
 		.one {
 			z-index: 1;
 			bottom: 1.2em;
-			left: 15%;
+			left: 13%;
 			transform: rotate(20deg);
 			animation: rotate-left 45s infinite ease;
-
 		}
 		.two {
 			z-index: 1;
@@ -183,7 +182,6 @@ header {
 			left: 65%;
 			transform: rotate(35deg);
 			animation: rotate-right 38s infinite ease;
-
 		}
 		.three {
 			z-index: 1;
@@ -191,7 +189,6 @@ header {
 			left: 65%;
 			transform: rotate(10deg);
 			animation: rotate-left 32s infinite ease;
-
 		}
 		.four {
 			z-index: 1;
@@ -199,15 +196,13 @@ header {
 			left: 10%;
 			transform: rotate(-15deg);
 			animation: rotate-left 25s infinite ease;
-
 		}
 		.five {
 			z-index: 1;
-			top: 7.5em;
-			left: 17%;
+			top: 6em;
+			left: 14%;
 			transform: rotate(-6deg);
 			animation: rotate-right 47s infinite ease;
-
 		}
 		.six {
 			z-index: 1;
@@ -215,29 +210,24 @@ header {
 			right: 16%;
 			transform: rotate(-6deg);
 			animation: rotate-left 32s infinite ease;
-
 		}
 	}
 }
 @keyframes rotate-right {
-	0%{
+	0% {
 		transform: rotate(0);
 	}
-	100%{
-		
+	100% {
 		transform: rotate(360deg);
 	}
-	
 }
 @keyframes rotate-left {
-	0%{
+	0% {
 		transform: rotate(0);
 	}
-	100%{
-		
+	100% {
 		transform: rotate(-360deg);
 	}
-	
 }
 @media (min-width: 0px) {
 	header {
@@ -290,26 +280,20 @@ header {
 				font-size: 2.5rem;
 				span {
 					color: $bright;
-				font-weight: 700;
-
+					font-weight: 700;
 				}
 			}
 		}
-		.image{
-
+		.image {
 			.unusual {
-				width: 470px;
+				width: 370px;
 				bottom: 2em;
 				right: 10%;
 			}
 		}
-		.menu-mobile{
+		.menu-mobile {
 			.nav_link {
-			
-				
 				font-size: 2.3rem;
-				
-	
 			}
 		}
 	}
@@ -323,22 +307,39 @@ header {
 		.navbar-dekstop {
 			display: flex;
 		}
-	}
-}
-
-@media (min-width: 1200px) {
-	header {
-		.image{
-
-			.unusual {
-				width: 570px;
-				bottom: 3em;
-				
+		.background-images {
+			.five {
+				z-index: 1;
+				top: 7em;
+				left: 14%;
+				transform: rotate(-6deg);
+				animation: rotate-right 47s infinite ease;
 			}
 		}
 	}
 }
 
+@media (min-width: 1200px) {
+	header {
+		.image {
+			.unusual {
+				width: 510px;
+				bottom: 3em;
+			}
+		}
+		.heading {
+			top: 32%;
+			left: 10%;
+			.heading-title {
+				font-size: 8.6rem;
+			}
+			p {
+				font-size: 2.8rem;
+			}
+		}
+		
+	}
+}
 @media (max-width: 1600px) {
 	// Style
 }
