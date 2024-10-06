@@ -1,0 +1,56 @@
+@mixin navbarr {
+	z-index: 10;
+	position: fixed;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #242c36;
+	img {
+		width: 76px;
+		padding: 0.5em;
+		margin-left: 8%;
+	}
+}
+@mixin navLinkss{
+    .nav_link {
+        position: relative;
+        padding: 2.3em 15%;
+        text-decoration: none;
+        color: $bright;
+        // text-transform: uppercase;
+        font-size: 2rem;
+        
+    }
+    .nav_link::before,
+    .nav_link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        bottom: 20px;
+        border-bottom: 4px solid $bright;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .nav_link::before {
+        right: 50%;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .nav_link::after {
+        left: 50%;
+    }
+    .nav_link:focus::before,
+    .nav_link:focus::after {
+        width: 40%;
+        transition: width 0.3s ease;
+    }
+
+    :focus {
+        outline: none;
+    }
+}
