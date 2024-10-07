@@ -224,8 +224,8 @@ header {
 		}
 	}
 }
-main{
-	.hero-img{
+main {
+	.hero-img {
 		background-image: url('../img/luis-reyes-mTorQ9gFfOg-unsplash.jpg');
 		height: 300px;
 		background-position: center;
@@ -236,13 +236,13 @@ main{
 		align-items: center;
 		justify-content: center;
 		box-shadow: inset 0 0 25px 25px $dark;
-		.hero-img-text{
+		.hero-img-text {
 			z-index: 3;
 			color: $light-creme;
 			text-transform: uppercase;
 			font-weight: 700;
 		}
-		.hero-img-shadow{
+		.hero-img-shadow {
 			position: absolute;
 			height: 100%;
 			top: 0;
@@ -251,12 +251,141 @@ main{
 			background-color: rgba($color: #1e232b, $alpha: 0.8);
 		}
 	}
+	///about me
+	.about-me {
+		background-color: $dark;
+		// height: 900px;
+		position: relative;
+		.background-images {
+			i {
+				position: absolute;
+				// z-index: -1;
+				font-size: 4em;
+				color: rgba($color: #100, $alpha: 0.13);
+				animation: rotate-right 35s infinite ease;
+			
+			}
+			.one {
+				z-index: 1;
+				top: 1.2%;
+				left: 7%;
+				transform: rotate(20deg);
+				animation: rotate-left 33s infinite ease;
+			}
+			.two {
+				z-index: 1;
+				top: 1.2%;
+				right: 7%;
+				transform: rotate(20deg);
+				animation: rotate-right 32s infinite ease;
+			}
+			.three{
+				z-index: 1;
+				top: 33%;
+				left: 7%;
+				transform: rotate(20deg);
+				animation: rotate-right 32s infinite ease;
+			}
+			.four {
+				z-index: 1;
+				top: 33%;
+				right: 7%;
+				transform: rotate(20deg);
+				animation: rotate-right 32s infinite ease;
+			}
+			.five{
+				z-index: 1;
+				top: 64%;
+				left: 7%;
+				transform: rotate(20deg);
+				animation: rotate-right 32s infinite ease;
+			}
+			.six {
+				z-index: 1;
+				top: 64%;
+				right: 7%;
+				transform: rotate(20deg);
+				animation: rotate-right 32s infinite ease;
+			}
+			.seven{
+				z-index: 1;
+				top: 94%;
+				left: 7%;
+				transform: rotate(20deg);
+				animation: rotate-right 32s infinite ease;
+			}
+			.eight {
+				z-index: 1;
+				top: 94%;
+				right: 7%;
+				transform: rotate(20deg);
+				animation: rotate-right 32s infinite ease;
+			}
+			
+		}
+		.wrapper {
+			position: relative;
+			.middle-line {
+				background-color: #dddddd;
+				position: absolute;
+				left: 50%;
+				top: 0;
+				transform: translateX(-50%);
+				height: 100%;
+				width: 4px;
+			}
+			.informations {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding-top: 6em;
+				.information {
+					border-radius: 14px;
+					margin-bottom: 5em;
+					.top {
+						display: flex;
+
+						text-align: center;
+						align-items: center;
+						justify-content: center;
+						margin: 1.4em;
+						position: relative;
+						border-bottom:2px solid $dark ;
+						border-radius: 13px;
+						.heading {
+							
+							color: $bright;
+							font-weight: 800;
+							font-size: 3.5rem;
+							position: relative;
+							padding-bottom: .5em;
+						}
+						
+					}
+					.bottom{
+						margin: 1.2em;
+						text-align: center;
+						color: $light-dark;
+						font-weight: 650;
+						.heading-text{
+							font-size: 1.5rem;
+						}
+					}
+					z-index: 2;
+					width: 250px;
+					// height: 150px;
+					background-color: #ddd;
+				}
+			}
+		}
+	}
 }
 @keyframes rotate-right {
 	0% {
 		transform: rotate(0);
 	}
-100% {
+	100% {
 		transform: rotate(360deg);
 	}
 }
@@ -313,13 +442,11 @@ main{
 			}
 		}
 	}
-	main{
-		.hero-img{
-			
-			.hero-img-text{
+	main {
+		.hero-img {
+			.hero-img-text {
 				font-size: 3rem;
 			}
-			
 		}
 	}
 }
@@ -368,7 +495,6 @@ main{
 		.navbar-dekstop {
 			visibility: visible;
 		}
-		
 	}
 }
 
@@ -400,13 +526,12 @@ main{
 			}
 		}
 	}
-	main{
-		.hero-img{
+	main {
+		.hero-img {
 			height: 350px;
-			.hero-img-text{
+			.hero-img-text {
 				font-size: 4rem;
 			}
-			
 		}
 	}
 }
