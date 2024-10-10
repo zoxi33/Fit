@@ -4,11 +4,14 @@ const closeBtn = document.querySelector('.close-icon')
 const allLinks = menuMobile.querySelectorAll('a')
 const allQuestions = document.querySelectorAll('.question')
 const currentyear = document.querySelector('.current-year')
+const body1 = document.body
 const showNav = () => {
 	menuMobile.classList.toggle('show-nav')
+	body1.classList.toggle('no-scroll')
 	allLinks.forEach(el => {
 		el.addEventListener('click', () => {
 			menuMobile.classList.remove('show-nav')
+			body1.classList.toggle('no-scroll')
 		})
 	})
 }
@@ -18,8 +21,8 @@ const handleCurrentYear = () => {
 }
 handleCurrentYear()
 const showAnswers = () => {
-	allQuestions.forEach(question =>{
-		question.addEventListener('click',()=>{
+	allQuestions.forEach(question => {
+		question.addEventListener('click', () => {
 			question.classList.toggle('showAnswer')
 			question.classList.toggle('rotateArrow')
 		})
@@ -29,6 +32,7 @@ showAnswers()
 hamburgerBtn.addEventListener('click', showNav)
 closeBtn.addEventListener('click', () => {
 	menuMobile.classList.toggle('show-nav')
+	body1.classList.toggle('no-scroll')
 })
 window.addEventListener('scroll', () => {
 	const navbar = document.querySelector('.navbar')

@@ -23,6 +23,9 @@ body {
 	max-width: 1600px;
 	width: 100%;
 }
+.no-scroll{
+	overflow: hidden;
+}
 header {
 	z-index: 0;
 	height: 100vh;
