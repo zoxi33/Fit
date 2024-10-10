@@ -171,7 +171,7 @@ header {
 			position: absolute;
 			// z-index: -1;
 			font-size: 4em;
-			color: rgba($color: #100, $alpha: 0.13);
+			color: rgba($color: rgb(121, 121, 121), $alpha: 0.13);
 			animation: rotate-right 35s infinite ease;
 		}
 		.one {
@@ -186,35 +186,35 @@ header {
 			bottom: 0.5em;
 			left: 65%;
 			transform: rotate(35deg);
-			animation: rotate-right 38s infinite ease;
+			animation: rotate-right 48s infinite ease;
 		}
 		.three {
 			z-index: 1;
 			top: 6em;
 			left: 65%;
 			transform: rotate(10deg);
-			animation: rotate-left 32s infinite ease;
+			animation: rotate-left 42s infinite ease;
 		}
 		.four {
 			z-index: 1;
 			top: 2.6em;
 			left: 10%;
 			transform: rotate(-15deg);
-			animation: rotate-left 25s infinite ease;
+			animation: rotate-left 60s infinite ease;
 		}
 		.five {
 			z-index: 1;
 			top: 6em;
 			left: 14%;
 			transform: rotate(-6deg);
-			animation: rotate-right 47s infinite ease;
+			animation: rotate-right 457s infinite ease;
 		}
 		.six {
 			z-index: 1;
 			top: 3em;
 			right: 16%;
 			transform: rotate(-6deg);
-			animation: rotate-left 32s infinite ease;
+			animation: rotate-left 52s infinite ease;
 		}
 		.seven {
 			display: none;
@@ -261,9 +261,8 @@ main {
 				position: absolute;
 				// z-index: -1;
 				font-size: 4em;
-				color: rgba($color: #100, $alpha: 0.13);
+				color: rgba($color: rgb(121, 121, 121), $alpha: 0.13);
 				animation: rotate-right 35s infinite ease;
-			
 			}
 			.one {
 				z-index: 1;
@@ -279,7 +278,7 @@ main {
 				transform: rotate(20deg);
 				animation: rotate-right 32s infinite ease;
 			}
-			.three{
+			.three {
 				z-index: 1;
 				top: 33%;
 				left: 7%;
@@ -293,7 +292,7 @@ main {
 				transform: rotate(20deg);
 				animation: rotate-right 32s infinite ease;
 			}
-			.five{
+			.five {
 				z-index: 1;
 				top: 64%;
 				left: 7%;
@@ -307,7 +306,7 @@ main {
 				transform: rotate(20deg);
 				animation: rotate-right 32s infinite ease;
 			}
-			.seven{
+			.seven {
 				z-index: 1;
 				top: 94%;
 				left: 7%;
@@ -321,7 +320,6 @@ main {
 				transform: rotate(20deg);
 				animation: rotate-right 32s infinite ease;
 			}
-			
 		}
 		.wrapper {
 			position: relative;
@@ -351,24 +349,22 @@ main {
 						justify-content: center;
 						margin: 1.4em;
 						position: relative;
-						border-bottom:2px solid $dark ;
+						border-bottom: 2px solid $dark;
 						border-radius: 13px;
 						.heading {
-							
 							color: $bright;
 							font-weight: 800;
 							font-size: 3.5rem;
 							position: relative;
-							padding-bottom: .5em;
+							padding-bottom: 0.5em;
 						}
-						
 					}
-					.bottom{
+					.bottom {
 						margin: 1.2em;
 						text-align: center;
 						color: $light-dark;
 						font-weight: 650;
-						.heading-text{
+						.heading-text {
 							font-size: 1.5rem;
 						}
 					}
@@ -533,8 +529,74 @@ main {
 				font-size: 4rem;
 			}
 		}
+
+		.about-me {
+			// height: 900px;ve;
+			.wrapper {
+				.informations {
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
+					gap: 10px;
+					row-gap: 100px;
+					grid-template-rows: repeat(3, 1fr);
+					align-items: center;
+					padding-right: 2.3em;
+					padding-left: 2.3em;
+
+					.information {
+						width: 100%;
+					}
+					.information:nth-child(1) {
+						grid-row: 1/2;
+						grid-column: 1/2;
+						position: relative;
+					}
+					.information:nth-child(1)::before {
+						content: '';
+						position: absolute;
+						width:51.8%;
+						height: 4px;
+						top: 50%;
+						left: 100%;
+						background-color: #ddd;
+						transform: translatey(-50%);
+					}
+					.information:nth-child(2) {
+						grid-row: 2/3;
+						grid-column: 3/4;
+						position: relative;
+					}
+					.information:nth-child(2)::before {
+						content: '';
+						position: absolute;
+						width:51.8%;
+						height: 4px;
+						top: 50%;
+						right: 100%;
+						background-color: #ddd;
+						transform: translatey(-50%);
+					}
+					.information:nth-child(3) {
+						grid-row: 3/4;
+						grid-column: 1/2;
+						position: relative;
+					}
+					.information:nth-child(3)::before {
+						content: '';
+						position: absolute;
+						width:51.8%;
+						height: 4px;
+						top: 50%;
+						left: 100%;
+						background-color: #ddd;
+						transform: translatey(-50%);
+					}
+				}
+			}
+		}
 	}
 }
+
 @media (min-width: 1600px) {
 	header {
 		.navbar-dekstop {
