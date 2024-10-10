@@ -11,7 +11,7 @@ const showNav = () => {
 	allLinks.forEach(el => {
 		el.addEventListener('click', () => {
 			menuMobile.classList.remove('show-nav')
-			body1.classList.toggle('no-scroll')
+			body1.classList.remove('no-scroll')
 		})
 	})
 }
