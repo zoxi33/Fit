@@ -3,6 +3,7 @@ const menuMobile = document.querySelector('.menu-mobile')
 const closeBtn = document.querySelector('.close-icon')
 const allLinks = menuMobile.querySelectorAll('a')
 const allQuestions = document.querySelectorAll('.question')
+const currentyear = document.querySelector('.current-year')
 const showNav = () => {
 	menuMobile.classList.toggle('show-nav')
 	allLinks.forEach(el => {
@@ -11,6 +12,11 @@ const showNav = () => {
 		})
 	})
 }
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear()
+	currentyear.innerText = year
+}
+handleCurrentYear()
 const showAnswers = () => {
 	allQuestions.forEach(question =>{
 		question.addEventListener('click',()=>{

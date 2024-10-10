@@ -17,7 +17,6 @@ html {
 body {
 	font-size: 1.6rem;
 	font-family: 'Roboto', sans-serif;
-	height: 10000px;
 }
 .wrapper {
 	margin: 0 auto;
@@ -324,7 +323,7 @@ main {
 		.wrapper {
 			position: relative;
 			.middle-line {
-				background-color: #dddddd;
+				background-color: #fcfcfc;
 				position: absolute;
 				left: 50%;
 				top: 0;
@@ -374,7 +373,7 @@ main {
 					z-index: 2;
 					width: 250px;
 					// height: 150px;
-					background-color: #ddd;
+					background-color: #fcfcfc;
 				}
 			}
 		}
@@ -382,25 +381,7 @@ main {
 	section.offers {
 		background-color: $dark;
 		padding: 4em 2em;
-		.section-title {
-			font-size: 3rem;
-			text-align: center;
-			color: #ddd;
-			text-transform: uppercase;
-			position: relative;
-			margin-bottom: 1.4em;
-		}
-		.section-title::before {
-			position: absolute;
-			content: '';
-			left: 50%;
-			bottom: -10px;
-			transform: translateX(-50%);
-			width: 6rem;
-			height: 5px;
-			background-color: #669699;
-			border-radius: 3px;
-		}
+
 		.wrapper {
 			.offers {
 				display: flex;
@@ -544,21 +525,97 @@ main {
 		background-color: $bright;
 		color: #fcfcfc;
 		height: 340px;
-		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 2em;
 		h2 {
-			font-size: 2.6rem;
-			justify-self: start;
+			font-size: 2.8rem;
 			font-weight: 500;
-			padding-top: 30%;
+			text-align: center;
+			padding-bottom: 2em;
 		}
 		button {
 			border: none;
 			cursor: pointer;
-			width: 180px;
-			height: 40px;
-			border-radius: 8px;
-			margin-top: 5%;
+			width: 160px;
+			font-size: 1.4rem;
+			font-weight: 500;
+			height: 35px;
+			border-radius: 28px;
+
 		}
+	}
+	.section-title {
+		font-size: 3rem;
+		text-align: center;
+		color: #ddd;
+		text-transform: uppercase;
+		position: relative;
+		margin-bottom: 1.4em;
+	}
+	.section-title::before {
+		position: absolute;
+		content: '';
+		left: 50%;
+		bottom: -10px;
+		transform: translateX(-50%);
+		width: 6rem;
+		height: 5px;
+		background-color: #669699;
+		border-radius: 3px;
+	}
+	section.opinions {
+		background-color: $dark;
+		padding: 3em;
+
+		.wrapper {
+			.opinions {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				padding: 2em 0;
+				.opinion {
+					width: 200px;
+					background-color: #f0f0f0;
+					padding: 1em;
+					position: relative;
+					margin: 2em;
+					border-radius: 8px;
+					transition: transform .5s;
+					h2{
+						font-size: 1.7rem;
+						padding: 0.5em 0;
+					}
+					p{
+						font-size: 1.3rem;
+					}
+					img{
+						width: 60px;
+						height: 60px;
+						position: absolute;
+						top: -14%;
+						right: 5%;
+						border-radius: 50%;
+						border: 2px solid $bright;
+					}
+				}
+				.opinion:hover{
+					transform: scale(1.05);
+				}
+			}
+		}
+	}
+}
+footer{
+	background-color: $light-dark;
+	text-align: center;
+	padding: 2.3em;
+	p{
+		font-size: 2.4rem;
+		color: #ddd;
 	}
 }
 
@@ -674,10 +731,8 @@ main {
 			text-align: center;
 			h2 {
 				font-size: 4.2rem;
-				justify-self: start;
 				font-weight: 400;
-				padding-top: 15%;
-			}
+		}
 			button {
 				border: none;
 				cursor: pointer;
@@ -686,7 +741,7 @@ main {
 				font-weight: 500;
 				height: 45px;
 				border-radius: 28px;
-				margin-top: 5%;
+
 			}
 		}
 	}
@@ -754,10 +809,28 @@ main {
 				}
 			}
 		}
+		section.opinions {
+			.wrapper {
+				.opinions {
+					.opinion {
+						width: 300px;
+						h2{
+							font-size: 2rem;
+						}
+						p{
+							font-size: 1.5rem;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
 @media (min-width: 1200px) {
+	footer{
+		padding: 4em;
+	}
 	header {
 		.image {
 			.unusual {
@@ -876,28 +949,23 @@ main {
 				}
 			}
 		}
-		section.personal {
-			background-color: $bright;
-			color: #fcfcfc;
-			height: 550px;
-			text-align: center;
-			h2 {
-				font-size: 4.8rem;
-				justify-self: start;
-				font-weight: 400;
-				padding-top: 15%;
-			}
-			button {
-				border: none;
-				cursor: pointer;
-				width: 220px;
-				font-size: 1.8rem;
-				font-weight: 500;
-				height: 45px;
-				border-radius: 28px;
-				margin-top: 5%;
+		section.opinions {
+			.wrapper {
+				.opinions {
+					.opinion {
+						width: 400px;
+						h2{
+							font-size: 2.4rem;
+							font-weight: bold;
+						}
+						p{
+							font-size: 1.7rem;
+						}
+					}
+				}
 			}
 		}
+		
 	}
 }
 
@@ -912,28 +980,5 @@ main {
 			}
 		}
 	}
-	main{
-		section.personal {
-			background-color: $bright;
-			color: #fcfcfc;
-			height: 640px;
-			text-align: center;
-			h2 {
-				font-size: 6rem;
-				justify-self: start;
-				font-weight: 400;
-				padding-top: 8%;
-			}
-			button {
-				border: none;
-				cursor: pointer;
-				width: 220px;
-				font-size: 1.8rem;
-				font-weight: 500;
-				height: 45px;
-				border-radius: 28px;
-				margin-top: 5%;
-			}
-		}
-	}
+	
 }
