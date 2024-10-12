@@ -23,7 +23,7 @@ body {
 	max-width: 1600px;
 	width: 100%;
 }
-.no-scroll{
+.no-scroll {
 	overflow: hidden;
 }
 header {
@@ -31,6 +31,84 @@ header {
 	height: 100vh;
 
 	background-color: $dark;
+	.wrapper {
+		.contact-form {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 100vh;
+			.section-title {
+				font-size: 3rem;
+				text-align: center;
+				color: #ddd;
+				text-transform: uppercase;
+				position: relative;
+				margin-bottom: 1.4em;
+				padding-top: 2em;
+			}
+			.section-title::before {
+				position: absolute;
+				content: '';
+				left: 50%;
+				bottom: -10px;
+				transform: translateX(-50%);
+				width: 6rem;
+				height: 5px;
+				background-color: #669699;
+				border-radius: 3px;
+				
+			}
+			.contact-form-top {
+				display: flex;
+				flex-direction: column;
+				text-transform: uppercase;
+				.contact-form-label{
+					font-size: 2rem;
+					color: #ddd;
+					font-weight: 500;
+					margin: 0 auto;
+					
+					
+				}
+				.contact-form-label:first-child{
+					margin-top: 2em;
+				}
+				.contact-form-input,textarea{
+					width: 90%;
+					margin: 1.3em auto;
+					height: 30px;
+					background: none;
+					border: 1px solid $bright;
+					border-radius: 8px;
+					color: #ddd;
+					padding-left: .6em;
+					
+				}
+				textarea{
+					height: 160px;
+					min-width: 90%;
+					max-width: 90%;
+				}
+			}
+			.contact-form-btn{
+				border: 1px solid $bright;
+				color: #ddd;
+				background: none;
+				width: 40%;
+				text-align: center;
+				margin: 0 auto;
+				border-radius: 8px;
+				height: 30px;
+				transition: border .5s,background-color .5s;
+				cursor: pointer;
+				margin-top: 1em;
+			}
+			.contact-form-btn:hover{
+				border: none;
+				background-color: $bright;
+			}
+		}
+	}
 	.scrolled {
 		background-color: rgba(25, 32, 41, 0.959);
 	}
@@ -226,6 +304,7 @@ header {
 		}
 	}
 }
+
 main {
 	.hero-img {
 		background-image: url('../img/luis-reyes-mTorQ9gFfOg-unsplash.jpg');
@@ -547,7 +626,6 @@ main {
 			font-weight: 500;
 			height: 35px;
 			border-radius: 28px;
-
 		}
 	}
 	.section-title {
@@ -587,15 +665,15 @@ main {
 					position: relative;
 					margin: 2em;
 					border-radius: 8px;
-					transition: transform .5s;
-					h2{
+					transition: transform 0.5s;
+					h2 {
 						font-size: 1.7rem;
 						padding: 0.5em 0;
 					}
-					p{
+					p {
 						font-size: 1.3rem;
 					}
-					img{
+					img {
 						width: 60px;
 						height: 60px;
 						position: absolute;
@@ -605,18 +683,18 @@ main {
 						border: 2px solid $bright;
 					}
 				}
-				.opinion:hover{
+				.opinion:hover {
 					transform: scale(1.05);
 				}
 			}
 		}
 	}
 }
-footer{
+footer {
 	background-color: $light-dark;
 	text-align: center;
 	padding: 2.3em;
-	p{
+	p {
 		font-size: 2.4rem;
 		color: #ddd;
 	}
@@ -725,6 +803,26 @@ footer{
 				margin-top: 7%;
 			}
 		}
+		.wrapper {
+			.contact-form {
+				.contact-form-top {
+					
+					
+					
+					textarea{
+						height: 160px;
+						min-width: 90%;
+						max-width: 90%;
+					}
+				}
+				.contact-form-btn{
+					width: 30%;
+					height: 40px;
+					
+				}
+				
+			}
+		}
 	}
 	main {
 		section.personal {
@@ -735,7 +833,7 @@ footer{
 			h2 {
 				font-size: 4.2rem;
 				font-weight: 400;
-		}
+			}
 			button {
 				border: none;
 				cursor: pointer;
@@ -744,7 +842,6 @@ footer{
 				font-weight: 500;
 				height: 45px;
 				border-radius: 28px;
-
 			}
 		}
 	}
@@ -817,10 +914,10 @@ footer{
 				.opinions {
 					.opinion {
 						width: 300px;
-						h2{
+						h2 {
 							font-size: 2rem;
 						}
-						p{
+						p {
 							font-size: 1.5rem;
 						}
 					}
@@ -831,7 +928,7 @@ footer{
 }
 
 @media (min-width: 1200px) {
-	footer{
+	footer {
 		padding: 4em;
 	}
 	header {
@@ -858,6 +955,28 @@ footer{
 			}
 			p {
 				font-size: 2.8rem;
+			}
+		}
+		.wrapper {
+			.contact-form {
+				.contact-form-top {
+					
+					.contact-form-input{
+						width: 80%;
+					}
+					
+					textarea{
+						height: 160px;
+						min-width: 80%;
+						max-width: 80%;
+					}
+				}
+				.contact-form-btn{
+					width: 25%;
+					height: 46px;
+					
+				}
+				
 			}
 		}
 	}
@@ -957,18 +1076,17 @@ footer{
 				.opinions {
 					.opinion {
 						width: 400px;
-						h2{
+						h2 {
 							font-size: 2.4rem;
 							font-weight: bold;
 						}
-						p{
+						p {
 							font-size: 1.7rem;
 						}
 					}
 				}
 			}
 		}
-		
 	}
 }
 
@@ -982,6 +1100,32 @@ footer{
 				margin-right: 12%;
 			}
 		}
+		.wrapper {
+			.contact-form {
+				.section-title{
+					font-size: 3.5rem;
+				}
+				.contact-form-top {
+					.contact-form-label{
+						font-size: 2rem;
+					}
+					.contact-form-input{
+						width: 85%;
+					}
+					
+					textarea{
+						height: 160px;
+						min-width: 85%;
+						max-width: 85%;
+					}
+				}
+				.contact-form-btn{
+					width: 25%;
+					height: 46px;
+					
+				}
+				
+			}
+		}
 	}
-	
 }
